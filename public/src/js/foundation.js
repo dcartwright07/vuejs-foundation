@@ -1,3 +1,5 @@
+// Inspired by repo: https://github.com/Kedo-Web/vue-foundation
+
 // Import Foundation core and utilities
 import jQuery from 'jquery';
 import { Foundation } from '../../../node_modules/foundation-sites/js/foundation.core';
