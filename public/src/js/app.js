@@ -12,6 +12,9 @@ app = new Vue({
 	},
 	mounted: function () {
 		this.offCanvas = new Foundation.OffCanvas($('#offCanvas'))
+	},
+	destroyed: function() {
+		this.offCanvas.destroy();
 	}
 })
 

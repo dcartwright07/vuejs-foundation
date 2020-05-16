@@ -23980,6 +23980,9 @@ app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   },
   mounted: function mounted() {
     this.offCanvas = new Foundation.OffCanvas($('#offCanvas'));
+  },
+  destroyed: function destroyed() {
+    this.offCanvas.destroy();
   }
 });
 errors.forEach(function (err) {
@@ -24031,11 +24034,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_foundation_sites_js_foundation_toggler__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../../../node_modules/foundation-sites/js/foundation.toggler */ "./node_modules/foundation-sites/js/foundation.toggler.js");
 /* harmony import */ var _node_modules_foundation_sites_js_foundation_tooltip__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../../../node_modules/foundation-sites/js/foundation.tooltip */ "./node_modules/foundation-sites/js/foundation.tooltip.js");
 /* harmony import */ var _node_modules_foundation_sites_js_foundation_responsiveAccordionTabs__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ../../../node_modules/foundation-sites/js/foundation.responsiveAccordionTabs */ "./node_modules/foundation-sites/js/foundation.responsiveAccordionTabs.js");
-// This Foundation loader file was built from the following source file:
-// - foundation-sites/dist/js/npm.js
-// The 'zf' path alias is configured in the following config file:
-// - build/webpack.base.conf.js
-// Foundation core and utils - Best to import all of these
+// Inspired by repo: https://github.com/Kedo-Web/vue-foundation
+// Import Foundation core and utilities
 
 
 
@@ -24047,10 +24047,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // Foundation plugins - Pick and choose your plugins here!
-// If you comment out a plugin you will need to comment out
-// the corresponding Foundation.plugin line also.
-// This is a template project so they have all been imported.
+ // Import Foundation plugins
+// If you comment out a plugin you will need to comment out the corresponding Foundation.plugin line also.
 
 
 
@@ -24081,8 +24079,7 @@ __webpack_require__(/*! motion-ui */ "./node_modules/motion-ui/dist/motion-ui.js
 
 __webpack_require__(/*! what-input */ "./node_modules/what-input/dist/what-input.js");
 
-_node_modules_foundation_sites_js_foundation_core__WEBPACK_IMPORTED_MODULE_1__["Foundation"].addToJquery(jquery__WEBPACK_IMPORTED_MODULE_0___default.a); // Add Foundation Utils to Foundation global namespace for backwards
-// compatibility.
+_node_modules_foundation_sites_js_foundation_core__WEBPACK_IMPORTED_MODULE_1__["Foundation"].addToJquery(jquery__WEBPACK_IMPORTED_MODULE_0___default.a); // Add Foundation Utils to Foundation global namespace for backwards compatibility.
 
 _node_modules_foundation_sites_js_foundation_core__WEBPACK_IMPORTED_MODULE_1__["Foundation"].rtl = _node_modules_foundation_sites_js_foundation_core_utils__WEBPACK_IMPORTED_MODULE_2__["rtl"];
 _node_modules_foundation_sites_js_foundation_core__WEBPACK_IMPORTED_MODULE_1__["Foundation"].GetYoDigits = _node_modules_foundation_sites_js_foundation_core_utils__WEBPACK_IMPORTED_MODULE_2__["GetYoDigits"];
@@ -24094,8 +24091,7 @@ _node_modules_foundation_sites_js_foundation_core__WEBPACK_IMPORTED_MODULE_1__["
 _node_modules_foundation_sites_js_foundation_core__WEBPACK_IMPORTED_MODULE_1__["Foundation"].Motion = _node_modules_foundation_sites_js_foundation_util_motion__WEBPACK_IMPORTED_MODULE_7__["Motion"];
 _node_modules_foundation_sites_js_foundation_core__WEBPACK_IMPORTED_MODULE_1__["Foundation"].Move = _node_modules_foundation_sites_js_foundation_util_motion__WEBPACK_IMPORTED_MODULE_7__["Move"];
 _node_modules_foundation_sites_js_foundation_core__WEBPACK_IMPORTED_MODULE_1__["Foundation"].Nest = _node_modules_foundation_sites_js_foundation_util_nest__WEBPACK_IMPORTED_MODULE_8__["Nest"];
-_node_modules_foundation_sites_js_foundation_core__WEBPACK_IMPORTED_MODULE_1__["Foundation"].Timer = _node_modules_foundation_sites_js_foundation_util_timer__WEBPACK_IMPORTED_MODULE_9__["Timer"]; // Touch and Triggers previously were almost purely sede effect driven,
-// so nzf/ need to add it to Foundation, just init them.
+_node_modules_foundation_sites_js_foundation_core__WEBPACK_IMPORTED_MODULE_1__["Foundation"].Timer = _node_modules_foundation_sites_js_foundation_util_timer__WEBPACK_IMPORTED_MODULE_9__["Timer"]; // Initialize Foundation Plugins
 
 _node_modules_foundation_sites_js_foundation_util_touch__WEBPACK_IMPORTED_MODULE_10__["Touch"].init(jquery__WEBPACK_IMPORTED_MODULE_0___default.a);
 _node_modules_foundation_sites_js_foundation_util_triggers__WEBPACK_IMPORTED_MODULE_11__["Triggers"].init(jquery__WEBPACK_IMPORTED_MODULE_0___default.a, _node_modules_foundation_sites_js_foundation_core__WEBPACK_IMPORTED_MODULE_1__["Foundation"]);
