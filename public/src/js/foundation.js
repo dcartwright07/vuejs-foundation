@@ -1,10 +1,4 @@
-// This Foundation loader file was built from the following source file:
-// - foundation-sites/dist/js/npm.js
-
-// The 'zf' path alias is configured in the following config file:
-// - build/webpack.base.conf.js
-
-// Foundation core and utils - Best to import all of these
+// Import Foundation core and utilities
 import jQuery from 'jquery';
 import { Foundation } from '../../../node_modules/foundation-sites/js/foundation.core';
 import { rtl, GetYoDigits, transitionend } from '../../../node_modules/foundation-sites/js/foundation.core.utils';
@@ -18,10 +12,8 @@ import { Timer } from '../../../node_modules/foundation-sites/js/foundation.util
 import { Touch } from '../../../node_modules/foundation-sites/js/foundation.util.touch';
 import { Triggers } from '../../../node_modules/foundation-sites/js/foundation.util.triggers';
 
-// Foundation plugins - Pick and choose your plugins here!
-// If you comment out a plugin you will need to comment out
-// the corresponding Foundation.plugin line also.
-// This is a template project so they have all been imported.
+// Import Foundation plugins
+// If you comment out a plugin you will need to comment out the corresponding Foundation.plugin line also.
 import { Abide } from '../../../node_modules/foundation-sites/js/foundation.abide';
 import { Accordion } from '../../../node_modules/foundation-sites/js/foundation.accordion';
 import { AccordionMenu } from '../../../node_modules/foundation-sites/js/foundation.accordionMenu';
@@ -54,8 +46,7 @@ require('what-input');
 
 Foundation.addToJquery(jQuery);
 
-// Add Foundation Utils to Foundation global namespace for backwards
-// compatibility.
+// Add Foundation Utils to Foundation global namespace for backwards compatibility.
 Foundation.rtl = rtl;
 Foundation.GetYoDigits = GetYoDigits;
 Foundation.transitionend = transitionend;
@@ -68,8 +59,7 @@ Foundation.Move = Move;
 Foundation.Nest = Nest;
 Foundation.Timer = Timer;
 
-// Touch and Triggers previously were almost purely sede effect driven,
-// so nzf/ need to add it to Foundation, just init them.
+// Initialize Foundation Plugins
 Touch.init(jQuery);
 Triggers.init(jQuery, Foundation);
 Foundation.plugin(Abide, 'Abide');
