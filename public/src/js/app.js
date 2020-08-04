@@ -1,8 +1,8 @@
-var errors = [];
-var app;
+var errors = []
+var app
 
-import Vue from 'vue';
-import './foundation';
+import Vue from 'vue'
+import './foundation'
 
 app = new Vue({
 	el: '#app',
@@ -16,5 +16,5 @@ app = new Vue({
 })
 
 errors.forEach(function (err) {
-	console.error(err);
+	console.error(err)
 })
