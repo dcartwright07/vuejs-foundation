@@ -11,10 +11,7 @@ app = new Vue({
 		content: "Content Code Goes Here"
 	},
 	mounted: function () {
-		this.offCanvas = new Foundation.OffCanvas($('#offCanvas'))
-	},
-	destroyed: function() {
-		this.offCanvas.destroy();
+		$(this.$el).foundation()
 	}
 })
 

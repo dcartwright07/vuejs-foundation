@@ -23443,7 +23443,7 @@ module.exports = g;
 
 /**
  * what-input - A global utility for tracking the current input method (mouse, keyboard or touch).
- * @version v5.2.9
+ * @version v5.2.10
  * @link https://github.com/ten1seven/what-input
  * @license MIT
  */
@@ -23979,10 +23979,7 @@ app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     content: "Content Code Goes Here"
   },
   mounted: function mounted() {
-    this.offCanvas = new Foundation.OffCanvas($('#offCanvas'));
-  },
-  destroyed: function destroyed() {
-    this.offCanvas.destroy();
+    $(this.$el).foundation();
   }
 });
 errors.forEach(function (err) {
