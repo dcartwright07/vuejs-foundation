@@ -11,11 +11,12 @@ $ npm install
 ## Setup
 
 For Development
-```
+```bash
+$ npm run watch
 $ npm run dev
 ```
 
 For Production
-```
+```bash
 $ npm run prod
 ```
